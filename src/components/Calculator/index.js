@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 import { PacmanLoader } from 'react-spinners';
-import { api } from '../constants';
-import './Transaction.css';
+import { api } from '../../constants';
+import './style.css';
 
-function Transaction() {
+function Calculator() {
   const [status, setStatus] = useState('taxDefining');
   const [destination, setDestination] = useState('');
   const [amount, setAmount] = useState('');
@@ -63,45 +63,9 @@ function Transaction() {
   
   return (
     <>
-        <form onSubmit={onSubmit}>
-          <h3>Transfer to account</h3> 
-          <br/>
-          <div className="form-group">
-            <label htmlFor="destination">Destination</label>
-            <input type="text" className="form-control" required value={destination} id="destination" onChange={handleDestination} />
-          </div>
-          <div className="form-group">
-            <label htmlFor="amount">Amount</label>
-            <div className="d-flex justify-content-center align-items-center">
-              <input type="number" className="form-control" required value={amount} onChange={handleAmount} id="amount" placeholder="Enter amount" />$
-            </div>
-          </div>
-          {
-            status === 'confirmOperation' && (
-              <>
-                <div className="form-group">
-                  <p>Tax procent: {taxProcent}%</p>
-                </div>
-                <div className="form-group">
-                  <p>Tax: {tax}$</p>
-                </div>
-              </>
-            )
-          }
-          {
-            status === 'loading' ? (
-              <PacmanLoader color={'#36D7B7'} />
-            ) : (
-              <button type="submit" className="btn btn-primary">
-                {status === 'confirmOperation' ? 'Confirm' : 'Continue'}
-              </button>
-            )
-          }
-          
-        </form>
-        <button className="logout btn btn-info" onClick={onLogout}>Logout</button>
+
     </>
   );
 }
 
-export default Transaction;
+export default Calculator;

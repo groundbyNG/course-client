@@ -1,0 +1,20 @@
+.header {
+  background-color: #34C6CD !important;
+}
+
+.content {
+  height: calc(100vh - 64px);
+  width: 100%;
+}
+
+a {
+  color: white;
+}
+a:hover {
+  color: #006064;
+  text-decoration: none;
+}
+
+.MuiDrawer-paperAnchorLeft {
+  width: 275px;
+}

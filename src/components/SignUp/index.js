@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
-import { api } from '../constants';
-import './SignUp.css';
+import { api } from '../../constants';
+import './style.css';
 
 function SignUp() {
   const [name, setName] = useState('');
   const [surname, setSurname] = useState('');
   const [password, setPassword] = useState('');
-  const [passportId, setPassportId] = useState('');
+  const [email, setEmail] = useState('');
 
   const history = useHistory();
 
   const handleName = (event) => setName(event.target.value);
   const handleSurname = (event) => setSurname(event.target.value);
   const handlePassword = (event) => setPassword(event.target.value);
-  const handlePassportId = (event) => setPassportId(event.target.value);
+  const handleEmail = (event) => setEmail(event.target.value);
 
   useEffect(() => {
-    localStorage.passportId && history.replace('/transaction');
+    localStorage.passportId && history.replace('/');
   }, []);
 
   const onSignUp = async (e) => {
@@ -28,7 +28,7 @@ function SignUp() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          passportId,
+          email,
           name,
           surname,
           password
@@ -46,12 +46,13 @@ function SignUp() {
   }
   
   return (
-        <form onSubmit={onSignUp}>
+      <div className="login-back">
+      <form onSubmit={onSignUp}>
           <h3>Fullfill form below: </h3> 
           <br/>
           <div className="form-group">
-            <label htmlFor="passportId">Passport ID</label>
-            <input type="text" className="form-control" required value={passportId} id="passportId" onChange={handlePassportId} />
+              <label htmlFor="email">Email</label>
+              <input type="email" className="form-control" required value={email} id="email" onChange={handleEmail} />
           </div>
           <div className="form-group">
             <label htmlFor="password">Password</label>
@@ -67,6 +68,7 @@ function SignUp() {
           </div>
           <button type="submit" className="btn btn-primary">Sign Up</button>
         </form>
+      </div>
   );
 }
 
