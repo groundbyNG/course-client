@@ -1,4 +1,7 @@
 import React, {useEffect, useState} from 'react';
+import {
+    useHistory
+} from "react-router-dom";
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
@@ -12,9 +15,11 @@ import './style.css';
 
 function Dashboard() {
     const [username, setUsername] = useState('username');
-    const [status, setStatus] = useState('taxDefining');
-    const [destination, setDestination] = useState('');
-    const [amount, setAmount] = useState('');
+    const history = useHistory();
+
+    const onClickCard = (path) => {
+        history.push(path);
+    }
 
     useEffect(() => {
         (async () => {
@@ -38,9 +43,9 @@ function Dashboard() {
                 Hi, {username}! Its time to study
             </h1>
             <div className="cards">
-                <Card className="card card-math">
-                    <CardActionArea className="action">
-                        <h1 className="value">0</h1>
+                <Card onClick={() => onClickCard('/calculator')} className="card card-math">
+                    <CardActionArea  className="action">
+                        <h1 className="value">56</h1>
                         <CardContent>
                             <Typography className="d-flex align-items-center justify-content-center" gutterBottom
                                         variant="h4" component="h2">
@@ -56,9 +61,9 @@ function Dashboard() {
                         </CardContent>
                     </CardActionArea>
                 </Card>
-                <Card className="card card-vocabular">
-                    <CardActionArea className="action">
-                        <h1 className="value">0</h1>
+                <Card onClick={() => onClickCard('/vocabular')} className="card card-vocabular">
+                    <CardActionArea  className="action">
+                        <h1 className="value">125</h1>
                         <CardContent>
                             <Typography className="d-flex align-items-center justify-content-center" gutterBottom
                                         variant="h4" component="h2">
@@ -74,9 +79,9 @@ function Dashboard() {
                         </CardContent>
                     </CardActionArea>
                 </Card>
-                <Card className="card card-library">
+                <Card onClick={() => onClickCard('/library')} className="card card-library">
                     <CardActionArea className="action">
-                        <h1 className="value">0</h1>
+                        <h1 className="value">15</h1>
                         <CardContent>
                             <Typography className="d-flex align-items-center justify-content-center" gutterBottom
                                         variant="h4" component="h2">

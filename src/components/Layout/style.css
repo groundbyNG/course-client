@@ -15,6 +15,11 @@ a:hover {
   text-decoration: none;
 }
 
+.sidebar-link {
+  display: flex;
+  color: black;
+}
+
 .MuiDrawer-paperAnchorLeft {
   width: 275px;
 }
