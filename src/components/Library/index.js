@@ -1,12 +1,15 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Button from '@material-ui/core/Button';
 import LinkOutlinedIcon from '@material-ui/icons/LinkOutlined';
 import {api} from '../../constants';
 import './style.css';
+import PauseCircleOutlineTwoToneIcon from '@material-ui/icons/PauseCircleOutlineTwoTone';
+import PlayCircleOutlineTwoToneIcon from '@material-ui/icons/PlayCircleOutlineTwoTone';
 import CheckCircleOutlineTwoToneIcon from '@material-ui/icons/CheckCircleOutlineTwoTone';
 import CheckCircleTwoToneIcon from '@material-ui/icons/CheckCircleTwoTone';
 
 function Library() {
+  const [intervalID, setId] = useState();
   const [materials, setMaterials] = useState([
     {
       title: 'Бунин И. А. Три сборника произведений',
@@ -49,19 +52,59 @@ function Library() {
       checked: false,
     },
   ]);
-
+  const [seconds, setSeconds] = useState(0);
+  const [isPaused, setPause] = useState(false);
+  const [timer, setTimer] = useState({
+    minutes: 0,
+    seconds: 0,
+  });
   const handleChange = (index) => {
     materials[index].checked = !materials[index].checked;
     setMaterials(materials);
   };
 
+  const changePause = () => {
+    if (!isPaused) {
+      clearInterval(intervalID);
+    } else {
+      setSeconds(seconds - 1);
+    }
+    setPause(!isPaused);
+  }
+
+  useEffect(() => {
+    setId(setInterval(
+      () => {
+        setSeconds(seconds + 1);
+        setTimer({
+          minutes: ((seconds + 1) / 60).toFixed(),
+          seconds: ((seconds + 1) % 60).toFixed(),
+        });
+      },
+      1000
+    ));
+    return clearInterval(intervalID);
+  }, [seconds]);
+
   return (
     <div className="library">
+      <div className="timer">
+        <span className="timer-label">Timer</span>
+        <span className="timer-value">
+           {timer.minutes < 10 ? `0${timer.minutes}` : timer.minutes}
+          :
+          {timer.seconds < 10 ? `0${timer.seconds}` : timer.seconds}
+        </span>
+        {!isPaused ?
+          <PauseCircleOutlineTwoToneIcon className="timer-icon" onClick={changePause} />
+          :
+          <PlayCircleOutlineTwoToneIcon className="timer-icon" onClick={changePause} />
+        }
+      </div>
       <div className="list">
         {
           materials
             .map((material, index) => {
-              console.log(material.checked)
               return (
                 <div className="library-row" key={index}>
                   {material.checked ?
