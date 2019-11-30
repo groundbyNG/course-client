@@ -11,6 +11,8 @@ import Login from '../Login';
 import PrivateRoute from '../PrivateRoute';
 import Layout from '../Layout';
 import Calculator from '../Calculator';
+import Vocabular from '../Vocabular';
+import Library from '../Library';
 
 import './style.css';
 
@@ -33,6 +35,12 @@ function App() {
                 </Route>
                 <Route path="/calculator" exact>
                   <Calculator />
+                </Route>
+                <Route path="/vocabular" exact>
+                  <Vocabular />
+                </Route>
+                <Route path="/library" exact>
+                  <Library />
                 </Route>
               </Layout>
             </PrivateRoute>

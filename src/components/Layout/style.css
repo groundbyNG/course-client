@@ -1,5 +1,16 @@
 .header {
-  background-color: #34C6CD !important;
+  background-color: #3e98c7 !important;
+}
+
+.header a {
+  color: white;
+}
+.header a:hover {
+  color: wheat;
+  text-decoration: none;
+}
+.header-icon {
+  margin: 0 1rem;
 }
 
 .content {
@@ -7,13 +18,6 @@
   width: 100%;
 }
 
-a {
-  color: white;
-}
-a:hover {
-  color: #006064;
-  text-decoration: none;
-}
 
 .sidebar-link {
   display: flex;

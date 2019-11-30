@@ -1,0 +1,65 @@
+.library {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.list {
+  width: 100% !important;
+  height: 100% !important;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.right-block {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-tooltip {
+  border-radius: 50% !important;
+  width: 3rem !important;
+  min-width: 3rem !important;
+  height: 3rem !important;
+  padding: 0 !important;
+  position: relative;
+  margin: 0 1rem !important;
+}
+
+.btn-tooltip .MuiButton-label {
+  position: absolute;
+  width: 2rem !important;
+  height: 2rem !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.library-row {
+  display: flex;
+  padding: 25px;
+  width: 60rem;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gainsboro;
+}
+
+
+.check-icon {
+  cursor: pointer;
+  width: 3rem !important;
+  height: 3rem !important;
+}
+.check-icon:hover {
+  color: forestgreen;
+}

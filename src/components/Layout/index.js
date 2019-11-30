@@ -13,6 +13,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import FunctionsIcon from '@material-ui/icons/Functions';
 import TranslateIcon from '@material-ui/icons/Translate';
+import LocalLibraryOutlinedIcon from '@material-ui/icons/LocalLibraryOutlined';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import {
   Link,
@@ -61,8 +62,9 @@ const Layout = ({children}) => {
               <MenuIcon/>
             </IconButton>
             <Typography className="ml-1" variant="h6">
-              <Link to="/">
+              <Link className="d-flex justify-content-center align-items-center" to="/">
                 Learning managment system
+                <LocalLibraryOutlinedIcon className="header-icon" />
               </Link>
             </Typography>
           </div>

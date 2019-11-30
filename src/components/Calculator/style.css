@@ -3,7 +3,6 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #00f5ff2e;
 
 }
 .cacl-container {
@@ -13,13 +12,12 @@
 }
 
 .task {
-  background-color: #32a9a7;
+  background-color: gainsboro;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
   margin-bottom: 50px;
-  color: white !important;
   font-size: 24px !important;
 }
 
@@ -32,8 +30,7 @@
   width: 75px;
   height: 75px;
   font-size: 24px !important;
-  background-color: #32a9a7 !important;
-  color: white !important;
+  box-shadow: 0 0 3px 0;
 }
 
 .ready-btn {
@@ -52,8 +49,24 @@
   height: 100%;
 }
 
+.progress {
+  width: 12rem;
+  height: 12rem;
+  margin: 0 auto;
+  background: none;
+  margin-bottom: 1rem;
+}
+
 .result {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-top: 1px solid gainsboro;
+}
+
+.result p {
+  margin: 0;
 }
 
 .result-task {

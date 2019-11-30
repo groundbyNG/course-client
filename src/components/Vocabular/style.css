@@ -1,0 +1,78 @@
+.vocabular {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tabs {
+  width: 40rem !important;
+  margin: 1rem;
+  background-color: #3e98c7 !important;
+}
+
+
+.list {
+  width: 100% !important;
+  height: 100% !important;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.ReactVirtualized__Grid__innerScrollContainer {
+  max-width: 100% !important;
+}
+
+.right-block {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-tooltip {
+  border-radius: 50% !important;
+  width: 3rem !important;
+  min-width: 3rem !important;
+  height: 3rem !important;
+  padding: 0 !important;
+  position: relative;
+  margin: 0 1rem !important;
+}
+
+.btn-tooltip .MuiButton-label {
+  position: absolute;
+  width: 2rem !important;
+  height: 2rem !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pair-tooltip {
+  margin: 0 1rem;
+  min-width: 1rem !important;
+  min-height: 1rem !important;
+}
+
+.MuiPopover-paper {
+  width: 40rem;
+  padding: 1rem;
+  border-radius: 0.5rem !important;
+}
+
+.list-row {
+  display: flex;
+  padding: 25px;
+  width: 40rem;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gainsboro;
+}

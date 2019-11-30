@@ -4,11 +4,14 @@ import Button from '@material-ui/core/Button';
 import DoneIcon from '@material-ui/icons/Done';
 import MathJax from 'react-mathjax2'
 import BackspaceIcon from '@material-ui/icons/Backspace';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import {api} from '../../constants';
 import './style.css';
 
 function Calculator() {
   const [answer, setAnswer] = useState('');
+  const [percentage, setPercentage] = useState(0);
   const [taskNumber, setTaskNumber] = useState(0);
   const [results, setResult] = useState([]);
   const examples = [
@@ -64,13 +67,14 @@ function Calculator() {
         answer,
         correct: examples[taskNumber].answer === answer,
         correctAnswer: examples[taskNumber].answer,
-      })
+      });
+      setPercentage(Math.floor((results.map(result => result.correct).filter(result => result).length / results.length) * 100));
       setResult(results);
       setAnswer('');
       taskNumber === examples.length ? setTaskNumber(0) : setTaskNumber(taskNumber + 1);
     }
   }
-
+  console.log(percentage);
   const ascii = examples[taskNumber].question;
   return (
     <div className="calculator">
@@ -134,12 +138,12 @@ function Calculator() {
         </div>
       </div>
       <div className="result-container">
+        <CircularProgressbar className="progress" value={percentage} text={`${percentage}%`} />
         <h2>Results: </h2>
         {
           results.length > 0 && results.map((result, index) => {
             return (
               <div className="result">
-                {index + 1}:
                 <div className="result-task">
                   <MathJax.Context input='ascii'>
                     <div>
