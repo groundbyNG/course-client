@@ -3,13 +3,13 @@ import Button from '@material-ui/core/Button';
 import { useHistory } from "react-router-dom";
 import DoneIcon from '@material-ui/icons/Done';
 import MathJax from 'react-mathjax2'
+import {request} from "../../../../helpers/request";
+import {api} from "../../../../constants";
 import BackspaceIcon from '@material-ui/icons/Backspace';
 import EqualizerIcon from '@material-ui/icons/Equalizer';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import './style.css';
-import {request} from "../../../../helpers/request";
-import {api} from "../../../../constants";
 
 function Calculator() {
   const history = useHistory();

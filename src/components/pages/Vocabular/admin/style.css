@@ -1,0 +1,11 @@
+.admin-vocabulab {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-vocabulab .stat-container {
+  padding: 10px;
+  height: auto;
+}
+

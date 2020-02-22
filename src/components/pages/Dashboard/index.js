@@ -28,6 +28,7 @@ function Dashboard() {
     if (localStorage.role === 'student') {
       getUsername();
       getMath();
+      getVocabulab();
     }
   }, []);
 
@@ -39,6 +40,11 @@ function Dashboard() {
   const getMath = async () => {
     const { stat } = await request('GET', true, null,`${api}/math-stat`);
     setMath(stat);
+  };
+
+  const getVocabulab = async () => {
+    const { learned } = await request('GET', true, null,`${api}/vocabulab-stat`);
+    setVocabulab(learned);
   };
 
   return (

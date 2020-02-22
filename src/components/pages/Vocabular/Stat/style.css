@@ -1,0 +1,21 @@
+.admin-vocabulab-stat .full-stat{
+  width: 100%;
+}
+
+.admin-vocabulab-stat .btn-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.admin-vocabulab-stat .back-button {
+  position: relative !important;
+  top: 0;
+  left: 0;
+  margin: 10px;
+}
+
+.admin-vocabulab-stat {
+  display: block;
+  position: relative;
+}

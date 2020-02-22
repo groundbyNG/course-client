@@ -26,7 +26,7 @@ function Table(props) {
     setElements(result);
   };
   const onRowDelete = async element => {
-    await request('DELETE', true, { id: element._id },`${api}${props.route}`);
+    await request('DELETE', true, { [props.deleteField]: element[props.deleteField] },`${api}${props.route}`);
     const result = await request('GET', true, null,`${api}${props.route}`);
     setElements(result);
   };

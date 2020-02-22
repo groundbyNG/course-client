@@ -12,6 +12,7 @@ import PrivateRoute from '../PrivateRoute';
 import Layout from '../Layout';
 import Calculator from '../../pages/Calculator';
 import MathStat from '../../pages/Calculator/Stat';
+import VocabularStat from '../../pages/Vocabular/Stat';
 import Vocabular from '../../pages/Vocabular';
 import Library from '../../pages/Library';
 
@@ -42,6 +43,9 @@ function App() {
                 </Route>
                 <Route path="/vocabular" exact>
                   <Vocabular />
+                </Route>
+                <Route path="/vocabular-stat" exact>
+                  <VocabularStat />
                 </Route>
                 <Route path="/library" exact>
                   <Library />

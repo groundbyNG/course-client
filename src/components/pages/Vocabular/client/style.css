@@ -1,9 +1,16 @@
 .vocabular {
-  height: 100%;
+  height: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  position: relative;
+}
+
+.vocabular .stat-container {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 .tabs {

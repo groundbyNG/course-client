@@ -1,11 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import MathJax from "react-mathjax2";
-
-import Table from '../../../common/Table';
-import './style.css';
 import Button from "@material-ui/core/Button";
 import EqualizerIcon from "@material-ui/icons/Equalizer";
 import {useHistory} from "react-router-dom";
+
+import Table from '../../../common/Table';
+import './style.css';
 
 function Calculator() {
   const history = useHistory();
@@ -37,6 +37,7 @@ function Calculator() {
         ]}
         route="/math"
         isEditable={true}
+        deleteField="_id"
       />
     </div>
   );
