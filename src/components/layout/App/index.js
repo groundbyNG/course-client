@@ -5,14 +5,15 @@ import {
   Route,
 } from "react-router-dom";
 
-import Dashboard from '../Dashboard';
-import SignUp from '../SignUp';
-import Login from '../Login';
+import Dashboard from '../../pages/Dashboard';
+import SignUp from '../../pages/SignUp';
+import Login from '../../pages/Login';
 import PrivateRoute from '../PrivateRoute';
 import Layout from '../Layout';
-import Calculator from '../Calculator';
-import Vocabular from '../Vocabular';
-import Library from '../Library';
+import Calculator from '../../pages/Calculator';
+import MathStat from '../../pages/Calculator/Stat';
+import Vocabular from '../../pages/Vocabular';
+import Library from '../../pages/Library';
 
 import './style.css';
 
@@ -35,6 +36,9 @@ function App() {
                 </Route>
                 <Route path="/calculator" exact>
                   <Calculator />
+                </Route>
+                <Route path="/math-stat" exact>
+                  <MathStat />
                 </Route>
                 <Route path="/vocabular" exact>
                   <Vocabular />

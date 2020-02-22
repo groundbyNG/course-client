@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
-import { api } from '../../constants';
+import { api } from '../../../constants';
 import './style.css';
 
 function SignUp() {
@@ -35,10 +35,11 @@ function SignUp() {
         }),
       }
       const response = await fetch(`${api}/signup`, options);
-      const { err, token } = await response.json();
+      const { err, token, role } = await response.json();
       if (!err) {
         localStorage.token = token;
-        history.replace('/transaction');
+        localStorage.role = role;
+        history.replace('/');
       } else {
         alert(err);
       }
@@ -47,6 +48,7 @@ function SignUp() {
   
   return (
       <div className="login-back">
+        <img src="logo.png" alt="#"/>
       <form onSubmit={onSignUp}>
           <h3>Fullfill form below: </h3> 
           <br/>

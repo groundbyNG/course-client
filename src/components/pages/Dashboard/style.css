@@ -39,15 +39,15 @@
 }
 
 .card-math::after {
-  background-image: url("../../img/math.jpg");
+  background-image: url("../../../img/math.jpg");
 }
 
 .card-vocabular::after {
-  background-image: url("../../img/vocabular.jpg");
+  background-image: url("../../../img/vocabular.jpg");
 }
 
 .card-library::after {
-  background-image: url("../../img/library.png");
+  background-image: url("../../../img/library.png");
 }
 
 .action {

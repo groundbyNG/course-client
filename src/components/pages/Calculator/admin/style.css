@@ -1,0 +1,11 @@
+.admin-calculator {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-calculator .stat-container {
+  padding: 10px;
+  height: auto;
+}
+

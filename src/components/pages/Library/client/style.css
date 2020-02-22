@@ -1,0 +1,98 @@
+.library {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.list {
+  width: 100% !important;
+  height: 100% !important;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.right-block {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-tooltip {
+  border-radius: 50% !important;
+  width: 3rem !important;
+  min-width: 3rem !important;
+  height: 3rem !important;
+  padding: 0 !important;
+  position: relative;
+  margin: 0 1rem !important;
+}
+
+.btn-tooltip .MuiButton-label {
+  position: absolute;
+  width: 2rem !important;
+  height: 2rem !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.library-row {
+  display: flex;
+  padding: 25px;
+  width: 60rem;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gainsboro;
+}
+
+.timer {
+  margin-top: 2rem;
+  padding: 0.5rem;
+  width: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid gainsboro;
+  color: gray;
+  border-radius: 0.25rem;
+}
+
+.timer-label {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.timer-icon {
+  height: 2rem !important;
+  width: 2rem !important;
+}
+
+.timer-left {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+
+.timer-value {
+  margin: 0 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.check-icon {
+  cursor: pointer;
+  width: 3rem !important;
+  height: 3rem !important;
+}
+.check-icon:hover {
+  color: forestgreen;
+}

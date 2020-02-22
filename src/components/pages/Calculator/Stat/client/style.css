@@ -1,0 +1,53 @@
+.client-math-stat {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  position: relative;
+}
+
+.scoreboard {
+  width: 400px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.scoreboard-row {
+  height: 50px;
+  border-top: 1px dotted gray;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.scoreboard-row:first-child, .scoreboard-row:nth-child(2) {
+  border-top: none;
+}
+
+.scoreboard-header {
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 2px solid black;
+}
+
+.scoreboard-email {
+  width: 70%;
+}
+
+.scoreboard-value {
+  width: 30%;
+}
+
+.user-stat h2 {
+  margin: 0 10px;
+}
+
+.progress-stat {
+  width: 250px;
+}
+
+.back-button {
+  position: absolute !important;
+  left: 10px;
+  top: 10px;
+}

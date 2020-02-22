@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory, Link } from "react-router-dom";
-import { api } from '../../constants';
+import { api } from '../../../constants';
 import './style.css';
 
 function Login() {
@@ -30,9 +30,10 @@ function Login() {
         }),
       }
       const response = await fetch(`${api}/signin`, options);
-      const { err, token } = await response.json();
+      const { err, token, role } = await response.json();
       if (!err) {
         localStorage.token = token;
+        localStorage.role = role;
         history.replace('/');
       } else {
         alert(err);
@@ -43,6 +44,7 @@ function Login() {
   
   return (
       <div className="login-back">
+        <img src="logo.png" alt="#"/>
         <form onSubmit={onSignIn}>
           <h3>Welcome!</h3> 
           <br/>

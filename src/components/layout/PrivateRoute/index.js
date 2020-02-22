@@ -8,7 +8,7 @@ const PrivateRoute = ({ children }) => {
         !localStorage.token && history.replace('/login');
     }, []);
 
-    return children;
-  }
+    return localStorage.token ? children : null;
+};
 
 export default PrivateRoute;
