@@ -1,5 +1,5 @@
 .library {
-  height: 100%;
+  height: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -95,4 +95,37 @@
 }
 .check-icon:hover {
   color: forestgreen;
+}
+
+.modal-pdf, .react-pdf__Document, .react-pdf__Page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pdf-pagination {
+  position: absolute;
+}
+
+.pdf-pagination__counter {
+  padding: 0 15px;
+  background-color: white;
+  bottom: 0;
+}
+
+.pdf-pagination_prev, .pdf-pagination_next {
+  width: 50px !important;
+  height: 50px !important;
+  background-color: white;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.pdf-pagination_prev {
+  left: 0;
+}
+.pdf-pagination_next {
+  right: 0;
 }

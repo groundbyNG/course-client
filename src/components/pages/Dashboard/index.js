@@ -29,6 +29,7 @@ function Dashboard() {
       getUsername();
       getMath();
       getVocabulab();
+      getLibrary();
     }
   }, []);
 
@@ -45,6 +46,11 @@ function Dashboard() {
   const getVocabulab = async () => {
     const { learned } = await request('GET', true, null,`${api}/vocabulab-stat`);
     setVocabulab(learned);
+  };
+
+  const getLibrary = async () => {
+    const { learned } = await request('GET', true, null,`${api}/library-stat`);
+    setLibrary(learned);
   };
 
   return (

@@ -28,7 +28,8 @@ function Stat() {
             <Table
               title="Users words statistic"
               columns={[
-                { title: 'User', field: 'email' },
+                { title: 'Email', field: 'email' },
+                { title: 'User', field: 'username' },
                 { title: 'Learned words', field: 'learned' },
                 { title: 'Not learned', field: 'notLearned' },
               ]}

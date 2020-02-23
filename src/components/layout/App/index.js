@@ -12,9 +12,11 @@ import PrivateRoute from '../PrivateRoute';
 import Layout from '../Layout';
 import Calculator from '../../pages/Calculator';
 import MathStat from '../../pages/Calculator/Stat';
-import VocabularStat from '../../pages/Vocabular/Stat';
 import Vocabular from '../../pages/Vocabular';
+import VocabularStat from '../../pages/Vocabular/Stat';
 import Library from '../../pages/Library';
+import LibraryStat from '../../pages/Library/Stat';
+
 
 import './style.css';
 
@@ -49,6 +51,9 @@ function App() {
                 </Route>
                 <Route path="/library" exact>
                   <Library />
+                </Route>
+                <Route path="/library-stat" exact>
+                  <LibraryStat />
                 </Route>
               </Layout>
             </PrivateRoute>
